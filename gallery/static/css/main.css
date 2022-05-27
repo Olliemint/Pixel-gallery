@@ -1,9 +1,8 @@
-.col-12{
-    background-color: aqua;
-  
-    display: flex;
-    gap: 2%;
+/* image display card */
+
+#cardsize img{
+    height: 30vh;
+    background-size: cover;
+
 }
-.col-12 a{
-    width: 100px;
-}
+

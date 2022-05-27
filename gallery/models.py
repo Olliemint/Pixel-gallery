@@ -19,7 +19,7 @@ class Location(models.Model):
 class Image(models.Model):
     category = models.ForeignKey(Category,on_delete=models.SET_NULL,null=True,blank=True)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL,null=True,blank=True)
-    name = models.CharField(max_length=80,null=False,blank=False)
+    image = models.ImageField(null=False,blank=False)
     description = models.TextField(max_length=700,null=False,blank=False)
     
     def __str__(self):
