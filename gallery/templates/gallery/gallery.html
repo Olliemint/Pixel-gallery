@@ -38,9 +38,9 @@
                         
                           <img src="{{ image.image.url }}" class="card-img-top" alt="..." style="width: 100%;">
                           <div class="card-body">
-                              <small>Category: Food</small>
+                              <small>Category: {{  image.category.category_name }}</small>
                           </div>
-                          <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'single_photo' 5%}">View</a>
+                          <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'single_photo' image.id %}">View</a>
                         
                   </div>
                         

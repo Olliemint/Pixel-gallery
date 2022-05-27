@@ -13,5 +13,8 @@ def gallery(request):
 
 
 def get_image_by_id(request,id):
+    image = Image.objects.get(id=id)
     
-    return render(request, 'gallery/singlephoto.html')
+    
+    
+    return render(request, 'gallery/singlephoto.html',{'image':image})

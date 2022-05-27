@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
-                <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Go Back</a>
+                <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Previous</a>
                 <div class="singlephoto">
-                    <img src="{{ photo.image.url}}" class="card-img-top" alt="...">
-                    <p>{{ photo.description }}</p>
+                    <img src="{{ image.image.url}}" class="card-img-top" alt="...">
+                    <p>{{ image.description }}</p>
 
 
                 </div>
