@@ -2,30 +2,52 @@
 
 
 {% block content %}
-<div class="container-fluid">
-    <div class="container my-4">
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-          <div class="col-sm-2">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-         
-        </div>
-      </div>
+<div class="m-5">
+  <div class="container">
+     <div class="row">
+         <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                Category
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+              <a href="#" class="list-group-item list-group-item-action">A third link item <span class="badge bg-primary rounded-pill">14</span></a>
+              <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+              <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+            </div>
+            </div>
+            <div class="card my-5" style="width: 18rem;">
+              <div class="card-header">
+                Location
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+              </ul>
+            </div>
+
+         </div>
+         <div class="col-md-9">
+              <div class="row">
+                 
+                  <div class="col-md-4">
+                      <div class="card m-1">
+                        
+                        </div>
+                  </div>
+                 
+                
+                  
+              </div>
+         </div>
+     </div> 
+  </div>
+  
 </div>
+ 
 
 {% endblock %}

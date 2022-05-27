@@ -1,0 +1,9 @@
+.col-12{
+    background-color: aqua;
+  
+    display: flex;
+    gap: 2%;
+}
+.col-12 a{
+    width: 100px;
+}
