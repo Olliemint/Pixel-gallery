@@ -11,10 +11,9 @@
               <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                 Category
               </a>
-              <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-              <a href="#" class="list-group-item list-group-item-action">A third link item <span class="badge bg-primary rounded-pill">14</span></a>
-              <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-              <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+              {% for category in categories %}
+              <a href="#" class="list-group-item list-group-item-action">{{  category.category_name }} <span class="badge bg-primary rounded-pill">14</span></a>
+              {% endfor %}
             </div>
             </div>
             <div class="card my-5" style="width: 18rem;">
@@ -33,11 +32,11 @@
          </div>
          <div class="col-md-9">
               <div class="row">
-                 
+                 {% for image in images %}
                   <div class="col-md-4">
                       <div class="card m-1" id="cardsize">
                         
-                          <img src="https://www.foodiesfeed.com/wp-content/uploads/2021/05/avocado-tree-819x1024.jpg.webp" class="card-img-top" alt="..." style="width: 100%;">
+                          <img src="{{ image.image.url }}" class="card-img-top" alt="..." style="width: 100%;">
                           <div class="card-body">
                               <small>Category: Food</small>
                           </div>
@@ -46,18 +45,10 @@
                   </div>
                         
                         </div>
-                        <div class="col-md-4">
-                          <div class="card m-1" id="cardsize">
-                            
-                              <img src="https://www.foodiesfeed.com/wp-content/uploads/2021/05/avocado-tree-819x1024.jpg.webp" class="card-img-top" alt="..." style="width: 100%;">
-                              <div class="card-body">
-                                  <small>Category: Food</small>
-                              </div>
-                              <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'single_photo' 5%}">View</a>
-                            
-                      </div>
-                            
-                            </div>
+                        {% empty %}
+                        <h3>no photos...</h3>
+                        {% endfor %}
+                      
                   </div>
                  
                 

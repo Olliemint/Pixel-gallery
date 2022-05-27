@@ -1,10 +1,15 @@
 from django.shortcuts import render
+from .models import Category,Location,Image
 
 # Create your views here.
 
 def gallery(request):
+    categories = Category.objects.all()
+    images = Image.objects.all()
     
-    return render(request, 'gallery/gallery.html')
+    dict = {'categories':categories,'images':images}
+    
+    return render(request, 'gallery/gallery.html',dict)
 
 
 def get_image_by_id(request,id):
