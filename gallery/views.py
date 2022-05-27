@@ -9,4 +9,4 @@ def gallery(request):
 
 def get_image_by_id(request,id):
     
-    return render(request, 'gallery/gallery.html')
+    return render(request, 'gallery/singlephoto.html')
