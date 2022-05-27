@@ -1,11 +1,22 @@
+from unicodedata import category
 from django.shortcuts import render
 from .models import Category,Location,Image
 
 # Create your views here.
 
 def gallery(request):
+    category = request.GET.get('category')
+    if category is None:
+        images = Image.objects.all()
+    
+    else:
+        images = Image.objects.filter(category__category_name=category)
+        
+        
+    
+    
     categories = Category.objects.all()
-    images = Image.objects.all()
+    
     
     dict = {'categories':categories,'images':images}
     
