@@ -4,8 +4,8 @@
 <div class="container" id="nav">
 <nav class="navbar navbar-light bg-light m-1">
     <div class="container-fluid">
-      <form class="d-flex ">
-        <input class="form-control me-2" type="search" placeholder="Category name e.g Food" aria-label="Search">
+      <form class="d-flex " action="{% url 'find_search' %}">
+        <input class="form-control me-2" name="search" type="search" placeholder="Category name e.g Food" aria-label="Search">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
     </div>

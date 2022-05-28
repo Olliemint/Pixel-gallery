@@ -1,5 +1,5 @@
 
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Category,Location,Image
 from django.contrib import messages
 
@@ -46,3 +46,23 @@ def filter_by_location(request,location):
  
     
     return render(request, 'gallery/photolocation.html',{'images':images})
+
+
+def search_image(request):
+    if 'search' in request.GET and request.GET['search']:
+        
+        search_term  = request.GET.get('search')
+        term = search_term.capitalize()
+        searchresults = Image.objects.filter(category__category_name=term)
+        
+       
+        return render(request, 'gallery/category_search.html', {'searchresults': searchresults})
+        
+
+    else:
+        return redirect('gallery')
+        
+    
+    
+     
+    

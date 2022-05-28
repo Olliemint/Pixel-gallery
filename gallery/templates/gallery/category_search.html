@@ -1,0 +1,37 @@
+{% extends 'gallery/layout.html' %}
+
+
+{% block content %}
+<div class="m-5">
+    <div class="container">
+        <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Previous</a>
+
+        <div class="row">
+            
+            {% for data in searchresults %}
+            <div class="col-md-4">
+                <div class="card m-1" id="cardsize">
+                  
+                    <img src="{{ data.image.url }}" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body">
+                        
+                        <small>location: {{  data.location.location }}</small>
+
+                    </div>
+                    <p>{{ data.description }}</p>
+                  
+            </div>
+                  
+                  </div>
+                  {% empty %}
+                  <h2>No available images tag with that location</h2>
+                  {% endfor %}
+
+                  
+
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
