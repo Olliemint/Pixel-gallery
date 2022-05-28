@@ -26,11 +26,13 @@
                 Location
               </div>
               <ul class="list-group">
-                <li class="list-group-item"></li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
+                {% for location in locations %}
+                <li class="list-group-item">
+                 <a href="{% url 'loca' %}?location={{location.location}}">{{location.location}}</a>
+                  
+                </li>
+                {% endfor %}
+          
               </ul>
             </div>
 
@@ -43,7 +45,10 @@
                         
                           <img src="{{ image.image.url }}" class="card-img-top" alt="..." style="width: 100%;">
                           <div class="card-body">
-                              <small>Category: {{  image.category.category_name }}</small>
+                              <small>Category: {{  image.category.category_name }}</small><br>
+                              
+                              <small>location: {{  image.location.location }}</small>
+
                           </div>
                           <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'single_photo' image.id %}">View</a>
                         
