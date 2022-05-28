@@ -5,4 +5,8 @@
     background-size: cover;
 
 }
+#nav{
+    display: grid;
+    place-content: center;
+}
 

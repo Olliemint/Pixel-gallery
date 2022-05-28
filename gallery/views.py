@@ -7,11 +7,14 @@ from django.contrib import messages
 
 def gallery(request):
     locations = Location.objects.all()
+    categories = Category.objects.all()
     
+    # filter by location
     if request.GET.get('location'):
         images = Image.objects.filter(location__location=request.GET.get('location'))
-        return render(request, 'gallery/photolocation.html', {'images':images})
+        return render(request, 'gallery/gallery.html', {'images':images,'categories':categories,'locations':locations})
     
+    # filter by category
     category = request.GET.get('category')
     if category is None:
         images = Image.objects.all()
@@ -21,9 +24,9 @@ def gallery(request):
         
         
     
-    categories = Category.objects.all()
     
     
+    # dictionary for  all data
     dict = {'categories':categories,'images':images,'locations':locations}
     
     return render(request, 'gallery/gallery.html',dict)
