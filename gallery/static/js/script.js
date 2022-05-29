@@ -1,10 +1,9 @@
-console.log("its working");
+console.log("try again");
 
-const btns = [...document.getElementsByClassName('copy')]
 
-console.log(btns);
-
-btns.forEach(btn=> btn.addEventListener('click', ()=>{
-    console.log('click clicked')
-}))
-
+function copyclipboard() {
+    var copyText = document.getElementById('link')
+    copyText.select();
+    document.execCommand('copy')
+    alert(`Copied clipboard`);
+  }
