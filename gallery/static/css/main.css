@@ -10,6 +10,14 @@
     place-content: center;
 }
 
+.card-img-top{
+    height: 70vh;
+
+}
+.singlephoto{
+    background-color: aquamarine;
+}
+
 
 
 

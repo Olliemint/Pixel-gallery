@@ -4,7 +4,8 @@
 {% block content %}
 <div class="m-5">
     <div class="container">
-        <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Previous</a>
+        <a class="btn btn-dark my-3" href="{% url 'gallery' %}"><span class="iconify" data-icon="ri:arrow-go-back-fill"></span>
+            Back</a>
 
         <div class="row">
             
@@ -24,7 +25,9 @@
                   
                   </div>
                   {% empty %}
-                  <h2>No available images tag with that location</h2>
+                  <div class="card" style="width: 38rem;">
+                      <h3>No images available based on that category</h3>
+                  </div>
                   {% endfor %}
 
                   

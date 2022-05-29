@@ -29,16 +29,21 @@
       </div>
       <div class="col-auto">
         <ul style="list-style:none;" >
-        <li class="nav-item dropdown btn btn-outline-info btn-sm">
+        <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="iconify" data-icon="bx:filter" data-width="30" data-height="30"></span>Filter
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for location in locations %}
-            <li class="list-group-item">
+            <li><hr class="dropdown-divider"></li>
+
+        <li><a class="dropdown-item" href="{% url 'loca' %}?location={{location.location}}">{{location.location}}</a></li>
+
+            
+            <!-- <li class="list-group-item">
              <a href="{% url 'loca' %}?location={{location.location}}">{{location.location}}</a>
               
-            </li>
+            </li> -->
             {% endfor %}
           </ul>
         </li>

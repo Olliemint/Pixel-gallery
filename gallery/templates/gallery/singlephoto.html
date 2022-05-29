@@ -2,22 +2,53 @@
 
 
 {% block content %}
+\
+
 <div class="m-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-                <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Previous</a>
-                <div class="singlephoto">
-                    <img src="{{ image.image.url}}" class="card-img-top" alt="...">
-                    <p>{{ image.description }}</p>
-                    
-                          <a href=""><span class="iconify" data-icon="akar-icons:copy" data-width="30" data-height="30"></span> </a>
+        <a class="btn btn-dark my-3" href="{% url 'gallery' %}"><span class="iconify" data-icon="ri:arrow-go-back-fill"></span>
+            Back</a>
 
-
+       <div class="row">
+           <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  Description
                 </div>
-            </div>
-
-        </div>
+                <div class="card-body">
+                   
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lore</p>
+                </div>
+               
+              </div>
+              <div class="card my-3" style="width: 18rem;">
+                <div class="card-header">
+                  Image link
+                </div>
+                <div class="card-body">
+                   
+                        
+                    <a href=""><span class="iconify" data-icon="akar-icons:copy" data-width="30" data-height="30"></span> </a>
+                </div>
+               
+              </div>
+           
+            
+           </div>
+           <div class="col-md-9">
+                <div class="row">
+                 
+                    <div class="college">
+                        
+                        <img src="{{ image.image.url}}" class="card-img-top" alt="...">
+                        
+    
+    
+                    </div>
+                    
+                </div>
+           </div>
+       </div> 
     </div>
     
 </div>
