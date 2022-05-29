@@ -54,7 +54,36 @@ class Image(models.Model):
         
     @classmethod
     def update_image(cls, id, imagechange):
-        cls.objects.filter(id = id).update(image1 = imagechange)  
+        cls.objects.filter(id = id).update(image1 = imagechange)
+        
+    @classmethod
+    def delete_image(cls, id):
+        cls.objects.filter(id=id).delete()
+
+    @classmethod
+    def update_image(cls, id, imagechange):
+        cls.objects.filter(id = id).update(image = imagechange)
+
+    @classmethod
+    def get_images_by_id(cls, id):
+        try:
+            image = cls.objects.get(id=id)
+            return image
+         
+            
+        
+        except Image.DoesNotExist:
+            print('Image does not exist')
+
+    @classmethod
+    def search_image(cls, category):
+        images = Image.objects.filter(category__category_name=category)
+        return images
+
+    @classmethod
+    def filter_by_location(cls, location):
+        images = Image.objects.filter(location__location=location)
+        return images      
         
       
     
