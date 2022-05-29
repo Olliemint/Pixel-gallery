@@ -6,7 +6,7 @@
 <div class="m-1">
 
 
-  <div class="container">
+  <div class="container my-4">
     {% for category in categories %}
     <a class="btn btn-outline-dark my-3"  href="{% url 'gallery' %}?category={{ category.category_name}}">{{category.category_name}}</a>
 
@@ -19,25 +19,27 @@
 
   </div>
   <div class="container">
-    <h1>Free Photos</h1>
+    <h1>Free Images</h1>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-auto me-auto">
-      <p>Photos <span class="text-muted">10k</span></p>
+      <p>Photos <span class="text-muted">{{photos_count}}</span></p>
 
       </div>
       <div class="col-auto">
-        <ul style="list-style:none;">
-        <li class="nav-item dropdown">
+        <ul style="list-style:none;" >
+        <li class="nav-item dropdown btn btn-outline-dark btn-sm">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="iconify" data-icon="bx:filter" data-width="30" data-height="30"></span>Filter
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            {% for location in locations %}
+            <li class="list-group-item">
+             <a href="{% url 'loca' %}?location={{location.location}}">{{location.location}}</a>
+              
+            </li>
+            {% endfor %}
           </ul>
         </li>
           
@@ -49,7 +51,7 @@
   </div>
   <div class="container">
      <div class="row">
-         <div class="col-md-3">
+         <!-- <div class="col-md-3">
           <div class="card" style="width: 18rem;">
             <div class="list-group">
               <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
@@ -80,20 +82,19 @@
               </ul>
             </div>
 
-         </div>
-         <div class="col-md-9">
+         </div> -->
+         <div class="col-md-12">
               <div class="row">
                  {% for image in images %}
-                  <div class="col-md-4">
+                  <div class="col-md-3">
                       <div class="card m-1" id="cardsize">
                         
                           <img src="{{ image.image.url }}" class="card-img-top" alt="..." style="width: 100%;">
-                          <div class="card-body">
+                          <!-- <div class="card-body">
                               <small>Category: {{  image.category.category_name }}</small><br>
                               
-                              <small>location: {{  image.location.location }}</small>
-
-                          </div>
+                           
+                          </div> -->
                           <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'single_photo' image.id %}">View</a>
                     
 

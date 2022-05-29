@@ -10,36 +10,37 @@
 <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
 <ul class="navbar-nav mr-auto">
   <li class="nav-item active ">
-    <a class="nav-link home" href="#" style="color: white; background-color: black;
+    <a class="nav-link home" href="{% url 'gallery' %}" style="color: white; background-color: black;
     margin-left: 10px; font-weight: 700; text-align: center; padding: 10px; border-radius: 25px;">Pixels </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Pixels</a>
+    <a class="nav-link" href="{% url 'gallery' %}"><span class="iconify" data-icon="bx:home-smile" data-width="30" data-height="30"></span></a>
   </li>
   <form class="form-inline my-2 my-lg-0 d-flex" action="{% url 'find_search' %}">
       <input class="form-control mr-sm-2 me-2" name="search" placeholder="Search..." type="search" placeholder="Search" aria-label="Search" style="width:800px ; margin-left: 10px; border-radius: 25px;
       height: 50px;">
 
-  <button class="btn btn-outline-dark" type="submit"><i class="ri-search-line"></i></button>
+  <button class="btn btn-outline-dark md-2" type="submit"><i class="ri-search-line"></i></button>
 
    
     </form>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="iconify" data-icon="ic:outline-explore" data-width="30" data-height="30" data-flip="horizontal,vertical"></span>
+        
       </a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Discover photos</a></li>
+        <li><a class="dropdown-item" href="#">Popular searches</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="https://justajournal.herokuapp.com/" target="_blank">Pixel Blog</a></li>
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#"><span class="iconify" data-icon="icon-park-outline:folder-upload" data-width="30" data-height="30"></span>Upload</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">FAQ</a>
     </li>
     <li class="nav-item">
       <a class="btn btn-dark" href="#">Join</a>

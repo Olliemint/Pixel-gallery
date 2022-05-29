@@ -8,6 +8,7 @@ from django.contrib import messages
 def gallery(request):
     locations = Location.objects.all()
     categories = Category.objects.all()
+    photos_count = Image.objects.count()
     
     # filter by location
     if request.GET.get('location'):
@@ -27,7 +28,7 @@ def gallery(request):
     
     
     # dictionary for  all data
-    dict = {'categories':categories,'images':images,'locations':locations}
+    dict = {'categories':categories,'images':images,'locations':locations,'photos_count':photos_count}
     
     return render(request, 'gallery/gallery.html',dict)
 
