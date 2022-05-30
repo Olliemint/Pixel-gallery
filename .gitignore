@@ -136,7 +136,8 @@ celerybeat.pid
 pixelenv/
 .env
 .venv
-env/
+
+
 venv/
 ENV/
 env.bak/
