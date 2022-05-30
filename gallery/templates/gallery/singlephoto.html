@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body">
                    
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lore</p>
+                    <p>{{ image.description }}</p>
                 </div>
                
               </div>
@@ -27,9 +27,13 @@
                 </div>
                 <div class="card-body">
                     <input type="text" value="https://pixelstour.herokuapp.com{{image.image.url}}" id="link">
-                   <button onclick="copyclipboard()"><span class="iconify" data-icon="akar-icons:copy" data-width="30" data-height="30"></span></button>
-                        
-                    <a href=""></span> </a>
+                    <button onclick="copyclipboard()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span class="iconify" data-icon="akar-icons:copy" data-width="30" data-height="30"></span>
+                      </button>
+                   
+
+                      <!-- Button trigger modal -->
+    
                 </div>
                
               </div>
@@ -53,5 +57,30 @@
     </div>
     
 </div>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>https://pixelstour.herokuapp.com{{image.image.url}}</p>
+            <button class="btn btn-success btn-sm" type="submit"><span class="iconify" data-icon="subway:tick" data-width="20" data-height="20"></span> Copied to clipboard</button>
+          </div>
+          <div class="modal-footer">
+            <button  type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+ 
 
 {% endblock %}

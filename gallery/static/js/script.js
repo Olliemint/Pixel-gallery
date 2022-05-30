@@ -7,6 +7,6 @@ function copyclipboard() {
     
     copyText.select();
     document.execCommand('copy')
-    alert(`Copied clipboard`);
+    
   }
   
