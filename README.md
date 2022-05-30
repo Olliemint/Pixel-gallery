@@ -1,6 +1,8 @@
+## Pixel-gallery
+## By Oliver Maiyo
 
 ### Screenshot of the App
-<img src="">
+<img src="https://raw.githubusercontent.com/Olliemint/Pixel-gallery/main/static/images/pixels-landing.png">
 
 
 ## Table of Content
@@ -15,7 +17,7 @@
 + [Licence](#licence)
 + [Authors Info](#authors-info)
 
-# Pixel-gallery
+## Description
 Django app that display images ,image category and also allow single image view and shows image description. A user can filter images by category or location and copy image link address
 
 ## Setup and Installation  
