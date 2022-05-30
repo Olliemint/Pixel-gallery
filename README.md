@@ -70,6 +70,9 @@ User Can :-
 * View different photos that interest them  
 * Click a single image to expand it and view the details of that photo  
 * view different images categories in a single page 
+* Copy image link address and share
+* Search images based on category name
+* Filter images by category or location
  
 
 ---
