@@ -1,23 +1,22 @@
+
+### Screenshot of the App
+<img src="">
+
+
+## Table of Content
+
++ [Description](#description)
++ [Setup/Installation Requirements](setup&installationrequirements)
++ [How To Access the Site](#howtoaccessthesite)
++ [UserStory](#userstory)
++ [Technology & Tools](#technology&tools)
++ [Reference](#reference)
++ [Known-Bugs](#knownbugs)
++ [Licence](#licence)
++ [Authors Info](#authors-info)
+
 # Pixel-gallery
 Django app that display images ,image category and also allow single image view and shows image description. A user can filter images by category or location and copy image link address
-
-## User Stories  
-User Can :-
-
-* View different photos that interest them  
-* Click a single image to expand it and view the details of that photo  
-* view different images categories in a single page 
- 
-
----
-## Access the website
-Need the latest browser to be able to View
-
-Follow this link https://cornygallery.herokuapp.com/
-
-It is hosted on heroku
-
----
 
 ## Setup and Installation  
 To get the project .......  
@@ -51,8 +50,28 @@ python manage.py makemigrations photo
  ```bash 
  python3 manage.py test photo
 ```
-Open the application on your browser `127.0.0.1:8000`.  
-  
+Open the application on your browser `127.0.0.1:8000`. 
+
+
+## Access the website
+Need the latest browser to be able to View
+
+Follow this link https://cornygallery.herokuapp.com/
+
+It is hosted on heroku
+
+---
+
+## User Stories  
+User Can :-
+
+* View different photos that interest them  
+* Click a single image to expand it and view the details of that photo  
+* view different images categories in a single page 
+ 
+
+---
+
   
 ## Technology used  
   
@@ -67,6 +86,9 @@ Open the application on your browser `127.0.0.1:8000`.
   
 ## Bugs  
 * no known bugs at the moment
+
+### License
+This Project is under the [MIT](LICENSE) license
   
 ## Contact Details
 oliverkoechrj@gmail.com
@@ -76,5 +98,4 @@ oliverkoechrj@gmail.com
 
 ---
 
-### License
-This Project is under the [MIT](LICENSE) license
+
